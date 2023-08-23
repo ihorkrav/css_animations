@@ -1,0 +1,89 @@
+h1{
+    text-align: center;
+}
+body{
+    background-color: rgb(223, 223, 103);
+}
+#pictures{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+    position: absolute;
+    bottom: 0;
+    top:10%;
+    left:10%;
+    overflow-y:hidden;
+}
+#pictures > * {
+display:flex;
+flex-direction: column;
+justify-content: center;
+}
+#calc{
+    width: 250px;
+    height: 300px;
+    background: url(./icons/calc.png) center/cover no-repeat;
+    transform: rotate(-30deg) scale(0.4);   
+   position: relative;
+   top:70px;
+   left:60px;
+}
+#book{
+    width: 250px;
+    height:300px;
+    background: url(./icons/book.png) center/cover no-repeat;
+    transform: rotate(-20deg) scale(0.7);
+}
+#tablet{
+    width: 250px;
+    height:300px;
+    background: url(./icons/paper.png) center/cover no-repeat;
+    transform: rotate(20deg) scale(0.7);
+}
+#paint{
+    width: 250px;
+    height:300px;
+    background: url(./icons/pallete.png) center/cover no-repeat;
+    transform: rotate(30deg) scale(0.4);
+    position: relative;
+    top:70px;
+    right:60px;
+    animation:anim 5s 2.5s both;
+}
+#pencil{
+    width: 100px;
+    height:100px;
+    background: url(./icons/pencil.png) center/cover no-repeat;
+    transform: scale(1.5);
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 0;
+    top:55%;
+    left:45%;
+     animation:anim 5s 2.5s both; 
+    
+ }
+ @keyframes anim{
+    from{
+        transform: translate(0,250%);
+    }
+    to{
+        transform: translate();
+    }
+ }
+#pictures div:nth-child(0){
+    animation:anim 5s ease-in 0.5s  both;
+}
+#pictures div:nth-child(1){
+    animation:anim 5s 1s both;
+}
+#pictures div:nth-child(2){
+    animation:anim 5s 1.5s both;
+}
+#pictures div:nth-child(3){
+    animation:anim 5s 2s both;
+}
+#pictures > * :nth-child(4){
+    animation:anim 5s 2.5s both;
+}
